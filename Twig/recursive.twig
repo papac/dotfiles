@@ -1,0 +1,23 @@
+{% macro recursiveCategory(category) %}
+    <li>
+        <h4><a href="{{ path(category.route, category.routeParams) }}">{{ category }}</a></h4>
+
+        {% if category.children|length %}
+            <ul>
+                {% for child in category.children %}
+                    {{ _self.recursiveCategory(child) }}
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </li>
+{% endmacro %}
+
+{% if categories %}
+    <div id="categories">
+        <ul>
+            {% for category in categories %}
+                {{ _self.recursiveCategory(category) }}
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
