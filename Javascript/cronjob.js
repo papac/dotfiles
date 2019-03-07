@@ -27,6 +27,7 @@ function cronjob(setting, task) {
   let timer;
   let isDone = false;
   let time = convertDateToTimestemp(setting.time || 0);
+  let data = setting.data || {};
 
   function done() {
     if (timer) {
@@ -36,9 +37,9 @@ function cronjob(setting, task) {
   }
 
   timer = setTimeout(() => {
-    task(setting.data || {}, done);
+    task(data, done);
     if (!isDone) {
-      cronjob({time}, task);
+      cronjob({time, data}, task);
     }
   }, time);
 }
