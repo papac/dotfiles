@@ -1,6 +1,6 @@
 
 /**
- * Convert Date
+ * Convert date to timestamp
  * 
  * @param {Number|String} time
  * @return {Number}
