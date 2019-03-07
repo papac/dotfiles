@@ -5,7 +5,7 @@
  * @param {Number|String} time
  * @return {Number}
  */
-function convertDateToTimestemp(time) {
+function convertToTimestamp(time) {
   if (time === 'now') {
     return 0;
   }
@@ -26,7 +26,7 @@ function convertDateToTimestemp(time) {
 function cronjob(setting, task) {
   let timer;
   let isDone = false;
-  let time = convertDateToTimestemp(setting.time || 0);
+  let time = convertToTimestamp(setting.time || 0);
   let data = setting.data || {};
 
   function done() {
