@@ -37,7 +37,7 @@ function cronjob(setting, task) {
 
   timer = setTimeout(() => {
     task(setting.data || {}, done);
-    if (isDone) {
+    if (!isDone) {
       cronjob({time}, task);
     }
   }, time);
