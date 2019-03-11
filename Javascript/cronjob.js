@@ -6,10 +6,6 @@
  * @return {Number}
  */
 function convertToTimestamp(time) {
-  if (time === 'now') {
-    return 0;
-  }
-
   if (time instanceof Date) {
     return (new Date) - time;
   }
