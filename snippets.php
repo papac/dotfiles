@@ -1,3 +1,5 @@
+<?php
+
 $stats = [
   ['month' => 'Jan', 'value' => 0],
   ['month' => 'Fev', 'value' => 0],
