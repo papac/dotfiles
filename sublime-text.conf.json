@@ -1,0 +1,30 @@
+{
+	"always_show_minimap_viewport": true,
+	"bold_folder_labels": true,
+	"caret_extra_bottom": 2,
+	"caret_extra_top": 2,
+	"caret_extra_width": 2,
+	"caret_style": "phase",
+	"color_scheme": "Packages/Materialize/schemes/Material Monokai Soda.tmTheme",
+	"drag_text": false,
+	"font_face": "Fira Code",
+	"font_size": 10.6,
+	"ignored_packages":
+	[
+		"subpixel_antialias",
+		"Vintage"
+	],
+	"line_padding_bottom": 4,
+	"line_padding_top": 4,
+	"material_theme_bold_tab": true,
+	"material_theme_compact_panel": true,
+	"material_theme_compact_sidebar": true,
+	"material_theme_contrast_mode": false,
+	"material_theme_disable_folder_animation": true,
+	"material_theme_disable_tree_indicator": true,
+	"material_theme_small_statusbar": true,
+	"material_theme_small_tab": true,
+	"material_theme_tabs_autowidth": true,
+	"overlay_scroll_bars": "enabled",
+	"theme": "Material Monokai Soda.sublime-theme"
+}
