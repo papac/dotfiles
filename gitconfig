@@ -1,0 +1,65 @@
+[push]
+    default = simple
+[core]
+    trustctime = false
+    editor = vim
+    filemode = false
+    autocrlf = input
+    safecrlf = false
+[color]
+    ui = true
+[credential]
+    helper = cache --timeout=3600
+[merge]
+    tool = vimdiff
+[mergetool]
+    keeptemporaries = false
+    keepbackups = false
+    prompt = false
+    trustexitcode = false
+    keepBackup = false
+[alias]
+    last = log -1 --stat
+    cp = cherry-pick
+    co = checkout
+    cl = clone
+    cm = commit
+    st = status -sb
+    br = branch
+    unstage = reset HEAD --
+    dc = diff --cached
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
+    dfw = diff --ignore-space-change
+[user]
+    name = Vianney Dupoy de Guitard
+    email = vianney@n4v1.com
+[log]
+    abbrevCommit = true
+[format]
+    pretty = %Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
+
+[pager]
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
+    blame = delta
+
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+
+[delta]
+    features = decorations
+    navigate = true
+
+[delta "interactive"]
+    keep-plus-minus-markers = false
+
+[delta "decorations"]
+    commit-decoration-style = blue ol
+    commit-style = raw
+    file-style = omit
+    hunk-header-decoration-style = blue box
+    hunk-header-file-style = red
+    hunk-header-line-number-style = "#067a00"
+    hunk-header-style = file line-number syntax
